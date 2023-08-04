@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<title></title>
+  <style type="text/css">
+    .one{
+      padding-bottom: 16px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="text-center">
+    <h2>Result checker</h2>
+  </div>
+  <div class="container bg-info">
+     <div class="row">
+
+      <!--subjects-->
+       <div class="col-4">
+        <p>Subject</p>
+         <p class="one">English</p>   
+         <p class="one">Maths</p>  
+         <p class="one">Chemistry</p>
+         <p class="one">Biology</p>
+         <p class="one">French</p>
+       </div>
+      
+      <!--scores-->
+       <div class="col-2">
+        <p>Score</p>
+        <form>
+
+          <input type="text" name="number" id="number1" class="form-control my-3" onchange="grades()">
+          <input type="text" name="number" id="number2" class="form-control my-3" onchange="gradess()">
+          <input type="text" name="number" id="number3" class="form-control my-3" onchange="gradesss()">
+          <input type="text" name="number" id="number4" class="form-control my-3" onchange="gradessss()">
+          <input type="text" name="number" id="number5" class="form-control my-3" onchange="gradesssss()">
+
+
+        </form>
+       </div>
+
+      <!--grades-->
+       <div class="col-2">
+        <p>Grade</p>
+        <form>
+          
+          <input type="text" name="number" id="letter1" class="form-control my-3">
+          <input type="text" name="number" id="letter2" class="form-control my-3">
+          <input type="text" name="number" id="letter3" class="form-control my-3">
+          <input type="text" name="number" id="letter4" class="form-control my-3">
+          <input type="text" name="number" id="letter5" class="form-control my-3">
+
+
+        </form>
+       </div>
+
+     </div>
+
+    <!--button-->
+     <div class="row">
+       <div class="col-md-2">
+         <button class="btn btn-secondary mb-3" onclick="addition()">Get Result</button>
+       </div>
+     </div>
+
+    <!--total-->
+     <div class="row">
+       <div class="col-md-4"><p>TOTAL</p></div>
+     <div class="col-md-4">
+       <span id="totalnumber"></span>
+     </div>
+     </div>
+
+
+    <!--average-->  
+      <div class="row">
+       <div class="col-md-4"><p>Average</p></div>
+     <div class="col-md-4">
+       <span id="average"></span>
+     </div>
+     </div>
+
+    <!--remarks-->
+      <div class="row">
+       <div class="col-md-4"><p>Remarks</p></div>
+     <div class="col-md-4">
+       <span id="remarks"></span>
+     </div>
+     </div>
+
+  </div>
+    
+
+
+
+<script type="text/javascript">
+  function grades(){
+    var sc=Number(document.getElementById('number1').value)
+     
+     var gd=document.getElementById('letter1').value 
+
+      if(sc<40){
+        document.getElementById('letter1').value="F"
+      }else if(sc>=40 && sc<45){
+        document.getElementById('letter1').value="E"
+      }else if(sc>=45 && sc<50){
+        document.getElementById('letter1').value="D"
+      }else if(sc>=50 && sc<=60){
+        document.getElementById('letter1').value="C"
+      }else if(sc>=60 && sc<=69){
+        document.getElementById('letter1').value="B"
+      }else{
+        document.getElementById('letter1').value="A"
+      }
+
+  }
+
+  function gradess(){
+    var sc=Number(document.getElementById('number2').value)
+     
+     var gd=document.getElementById('letter2').value 
+
+      if(sc<40){
+        document.getElementById('letter2').value="F"
+      }else if(sc>=40 && sc<45){
+        document.getElementById('letter2').value="E"
+      }else if(sc>=45 && sc<50){
+        document.getElementById('letter2').value="D"
+      }else if(sc>=50 && sc<=60){
+        document.getElementById('letter2').value="C"
+      }else if(sc>=60 && sc<=69){
+        document.getElementById('letter2').value="B"
+      }else{
+        document.getElementById('letter2').value="A"
+      }
+
+  }
+
+  function gradesss(){
+    var sc=Number(document.getElementById('number3').value)
+     
+     var gd=document.getElementById('letter3').value 
+
+      if(sc<40){
+        document.getElementById('letter3').value="F"
+      }else if(sc>=40 && sc<45){
+        document.getElementById('letter3').value="E"
+      }else if(sc>=45 && sc<50){
+        document.getElementById('letter3').value="D"
+      }else if(sc>=50 && sc<=60){
+        document.getElementById('letter3').value="C"
+      }else if(sc>=60 && sc<=69){
+        document.getElementById('letter3').value="B"
+      }else{
+        document.getElementById('letter3').value="A"
+      }
+
+  }
+
+  function gradessss(){
+    var sc=Number(document.getElementById('number4').value)
+     
+     var gd=document.getElementById('letter4').value 
+
+      if(sc<40){
+        document.getElementById('letter4').value="F"
+      }else if(sc>=40 && sc<45){
+        document.getElementById('letter4').value="E"
+      }else if(sc>=45 && sc<50){
+        document.getElementById('letter4').value="D"
+      }else if(sc>=50 && sc<=60){
+        document.getElementById('letter4').value="C"
+      }else if(sc>=60 && sc<=69){
+        document.getElementById('letter4').value="B"
+      }else{
+        document.getElementById('letter4').value="A"
+      }
+
+  }
+
+  function gradesssss(){
+    var sc=Number(document.getElementById('number5').value)
+     
+     var gd=document.getElementById('letter5').value 
+
+      if(sc<40){
+        document.getElementById('letter5').value="F"
+      }else if(sc>=40 && sc<45){
+        document.getElementById('letter5').value="E"
+      }else if(sc>=45 && sc<50){
+        document.getElementById('letter5').value="D"
+      }else if(sc>=50 && sc<=60){
+        document.getElementById('letter5').value="C"
+      }else if(sc>=60 && sc<=69){
+        document.getElementById('letter5').value="B"
+      }else{
+        document.getElementById('letter5').value="A"
+      }
+
+  }
+
+  function addition(){
+   var total1=Number(document.getElementById('number1').value)
+   var total2=Number(document.getElementById('number2').value)
+   var total3=Number(document.getElementById('number3').value)
+   var total4=Number(document.getElementById('number4').value)
+   var total5=Number(document.getElementById('number5').value)
+    // validation
+       // empty
+     if(total1==""){
+       alert('please enter a score for English')
+     }else if(total2==""){
+       alert('please enter a score for math')
+     }else if(total3==""){
+       alert('please enter a score for chemistry')
+     }else if(total4==""){
+      alert('please enter a score for Biology')
+     }else if(total5==""){
+       alert('please enter a score for French')
+     }else{
+        var totalnumber=total1+total2+total3+total4+total5
+       var average=totalnumber/5 
+
+       document.getElementById('totalnumber').innerHTML=totalnumber;
+       document.getElementById('average').innerHTML=average;
+  
+
+  
+   var remark=document.getElementById('remarks').innerHTML
+    if(average>50){
+       document.getElementById('remarks').innerHTML='Proud of you'
+    }else{
+       document.getElementById('remarks').innerHTML='You disappointed your teacher!'
+    }
+  
+  }
+     }
+
+      
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
